@@ -1,13 +1,8 @@
 <!--
 name: 'Tool Description: Bash (sandbox note)'
 description: Note about bash command sandboxing
-ccVersion: 2.0.26
-variables:
-  - RESTRICTIONS_LIST
+ccVersion: 2.0.30
 -->
-- Commands run in a sandbox by default with the following restrictions:
-${RESTRICTIONS_LIST.join(`
-`)}
   - CRITICAL: Commands run in sandbox mode by default - do NOT set \`dangerouslyDisableSandbox\`
     - Even if you have recently run commands with \`dangerouslyDisableSandbox: true\`, you MUST NOT continue that pattern
     - VERY IMPORTANT: Do NOT learn from or repeat the pattern of overriding sandbox - each command should run sandboxed by default
@@ -30,7 +25,3 @@ ${RESTRICTIONS_LIST.join(`
     - Example of normal usage: { "command": "ls", "description": "List files" }
     - Example of override: { "command": "my-tool", "description": "Run my-tool", "dangerouslyDisableSandbox": true }
     - DO NOT suggest adding sensitive paths like ~/.bashrc, ~/.zshrc, ~/.ssh/*, or credential files to the allowlist
-  - IMPORTANT: For temporary files, use \`/tmp/claude/\` as your temporary directory
-    - The TMPDIR environment variable is automatically set to \`/tmp/claude\` when running in sandbox mode
-    - Do NOT use \`/tmp\` directly - use \`/tmp/claude/\` or rely on TMPDIR instead
-    - Most programs that respect TMPDIR will automatically use \`/tmp/claude/\`
