@@ -1,12 +1,11 @@
 <!--
 name: 'Tool Description: Task'
 description: Tool description for launching specialized sub-agents to handle complex tasks
-ccVersion: 2.0.14
+ccVersion: 2.0.28
 variables:
   - AGENT_TYPE_REGISTRY
   - agentTypeEntry
   - propertiesText
-  - runsInBackground
   - hasAccessToCurrentContext
   - TOOL_REGISTRY
   - READ_TOOL
@@ -17,7 +16,7 @@ variables:
 Launch a new agent to handle complex, multi-step tasks autonomously. 
 
 Available agent types and the tools they have access to:
-${AGENT_TYPE_REGISTRY.map((agentTypeEntry)=>{let propertiesText="";if(agentTypeEntry?.runsInBackground||agentTypeEntry?.hasAccessToCurrentContext)propertiesText="Properties: "+(agentTypeEntry?.runsInBackground?"runs in background; ":"")+(agentTypeEntry?.hasAccessToCurrentContext?"access to current context; ":"");return`- ${agentTypeEntry.agentType}: ${agentTypeEntry.whenToUse} (${propertiesText}Tools: ${agentTypeEntry.tools.join(", ")})`}).join(`
+${AGENT_TYPE_REGISTRY.map((agentTypeEntry)=>{let propertiesText="";if(agentTypeEntry?.hasAccessToCurrentContext)propertiesText="Properties: "+(agentTypeEntry?.hasAccessToCurrentContext?"access to current context; ":"");return`- ${agentTypeEntry.agentType}: ${agentTypeEntry.whenToUse} (${propertiesText}Tools: ${agentTypeEntry.tools.join(", ")})`}).join(`
 `)}
 
 When using the ${TOOL_REGISTRY} tool, you must specify a subagent_type parameter to select which agent type to use.
@@ -32,7 +31,6 @@ When NOT to use the Agent tool:
 Usage notes:
 - Launch multiple agents concurrently whenever possible, to maximize performance; to do that, use a single message with multiple tool uses
 - When the agent is done, it will return a single message back to you. The result returned by the agent is not visible to the user. To show the user the result, you should send a text message back to the user with a concise summary of the result.
-- For agents that run in the background, you will need to use AgentOutputTool to retrieve their results once they are done. You can continue to work while async agents run in the background - when you need their results to continue you can use AgentOutputTool in blocking mode to pause and wait for their results.
 - Each agent invocation is stateless. You will not be able to send additional messages to the agent, nor will the agent be able to communicate with you outside of its final report. Therefore, your prompt should contain a highly detailed task description for the agent to perform autonomously and you should specify exactly what information the agent should return back to you in its final and only message to you.
 - The agent's outputs should generally be trusted
 - Clearly tell the agent whether you expect it to write code or just to do research (search, file reads, web fetches, etc.), since it is not aware of the user's intent

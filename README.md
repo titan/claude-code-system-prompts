@@ -1,6 +1,6 @@
 # Claude Code System Prompts
 
-This repository contains an up-to-date list of all Claude Code's various system prompts and their associated token counts as of **[Claude Code v2.0.27](https://www.npmjs.com/package/@anthropic-ai/claude-code/v/2.0.27) (October 24th, 2025).**
+This repository contains an up-to-date list of all Claude Code's various system prompts and their associated token counts as of **[Claude Code v2.0.28](https://www.npmjs.com/package/@anthropic-ai/claude-code/v/2.0.28) (October 27th, 2025).**
 
 Why multiple "system prompts?"
 
@@ -73,7 +73,7 @@ Misc large strings.
 
 Parts of the main system prompt.
 
-- [**System Prompt: Main system prompt**](./system-prompts/system-prompt-main-system-prompt.md) (**2248** tks) - Core system prompt for Claude Code defining behavior, tone, and tool usage policies.
+- [**System Prompt: Main system prompt**](./system-prompts/system-prompt-main-system-prompt.md) (**2276** tks) - Core system prompt for Claude Code defining behavior, tone, and tool usage policies.
 - [System Prompt: Learning mode (insights)](./system-prompts/system-prompt-learning-mode-insights.md) (**142** tks) - Instructions for providing educational insights when learning mode is active.
 - [System Prompt: Learning mode](./system-prompts/system-prompt-learning-mode.md) (**1042** tks) - System Prompt: Main system prompt for learning mode with human collaboration instructions.
 
@@ -84,7 +84,7 @@ Text for large system reminders.
 > [!NOTE]
 > Note that we're planning to add a **system reminder creator/editor** to [tweakcc](https://github.com/Piebald-AI/tweakcc); :+1: [this issue](https://github.com/Piebald-AI/tweakcc/issues/113) if you're interested in that idea.
 
-- [System Reminder: Plan mode is active](./system-prompts/system-reminder-plan-mode-is-active.md) (**173** tks) - System reminder sent to Claude when the user enters plan mode.
+- [System Reminder: Plan mode is active](./system-prompts/system-reminder-plan-mode-is-active.md) (**190** tks) - System reminder sent to Claude when the user enters plan mode.
 
 ### Builtin Tool Descriptions
 
@@ -97,7 +97,7 @@ Text for large system reminders.
 - [Tool Description: ReadFile](./system-prompts/tool-description-readfile.md) (**439** tks) - Tool description for reading files.
 - [Tool Description: Skill](./system-prompts/tool-description-skill.md) (**270** tks) - Tool description for executing skills in the main conversation.
 - [Tool Description: SlashCommand](./system-prompts/tool-description-slashcommand.md) (**381** tks) - Tool description for executing slash commands.
-- [Tool Description: Task](./system-prompts/tool-description-task.md) (**1140** tks) - Tool description for launching specialized sub-agents to handle complex tasks.
+- [Tool Description: Task](./system-prompts/tool-description-task.md) (**1044** tks) - Tool description for launching specialized sub-agents to handle complex tasks.
 - [Tool Description: TodoWrite](./system-prompts/tool-description-todowrite.md) (**2167** tks) - Tool description for creating and managing task lists.
 - [Tool Description: WebFetch](./system-prompts/tool-description-webfetch.md) (**278** tks) - Tool description for web fetch functionality.
 - [Tool Description: WebSearch](./system-prompts/tool-description-websearch.md) (**166** tks) - Tool description for web search functionality.
