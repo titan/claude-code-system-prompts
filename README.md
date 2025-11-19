@@ -1,6 +1,6 @@
 # Claude Code System Prompts
 
-This repository contains an up-to-date list of all Claude Code's various system prompts and their associated token counts as of **[Claude Code v2.0.36](https://www.npmjs.com/package/@anthropic-ai/claude-code/v/2.0.36) (November 7th, 2025).**
+This repository contains an up-to-date list of all Claude Code's various system prompts and their associated token counts as of **[Claude Code v2.0.37](https://www.npmjs.com/package/@anthropic-ai/claude-code/v/2.0.37) (November 10th, 2025).**
 
 Why multiple "system prompts?"
 
@@ -52,6 +52,7 @@ Sub-agents and utilities.
 - [Agent Prompt: Bash output summarization](./system-prompts/agent-prompt-bash-output-summarization.md) (**605** tks) - System prompt for determining whether bash command output should be summarized.
 - [Agent Prompt: Conversation summarization with additional instructions](./system-prompts/agent-prompt-conversation-summarization-with-additional-instructions.md) (**1133** tks) - Extended summarization prompt with support for custom additional instructions.
 - [Agent Prompt: Conversation summarization](./system-prompts/agent-prompt-conversation-summarization.md) (**1121** tks) - System prompt for creating detailed conversation summaries.
+- [Agent Prompt: Prompt Hook execution](./system-prompts/agent-prompt-prompt-hook-execution.md) (**133** tks) - Prompt given to Claude when acting evaluating whether to pass or fail a prompt hook..
 - [Agent Prompt: Session notes template](./system-prompts/agent-prompt-session-notes-template.md) (**226** tks) - Template structure for session notes tracking coding work and decisions.
 - [Agent Prompt: Session notes update instructions](./system-prompts/agent-prompt-session-notes-update-instructions.md) (**730** tks) - Instructions for updating session notes files during conversations.
 - [Agent Prompt: Session title generation](./system-prompts/agent-prompt-session-title-generation.md) (**159** tks) - System prompt for generating succinct titles for coding sessions.
@@ -73,7 +74,7 @@ Misc large strings.
 
 Parts of the main system prompt.
 
-- [**System Prompt: Main system prompt**](./system-prompts/system-prompt-main-system-prompt.md) (**2465** tks) - Core system prompt for Claude Code defining behavior, tone, and tool usage policies.
+- [**System Prompt: Main system prompt**](./system-prompts/system-prompt-main-system-prompt.md) (**2466** tks) - Core system prompt for Claude Code defining behavior, tone, and tool usage policies.
 - [System Prompt: Learning mode (insights)](./system-prompts/system-prompt-learning-mode-insights.md) (**142** tks) - Instructions for providing educational insights when learning mode is active.
 - [System Prompt: Learning mode](./system-prompts/system-prompt-learning-mode.md) (**1042** tks) - System Prompt: Main system prompt for learning mode with human collaboration instructions.
 - [System Prompt: MCP CLI](./system-prompts/system-prompt-mcp-cli.md) (**1357** tks) - Instructions for using mcp-cli to interact with Model Context Protocol servers.
