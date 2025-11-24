@@ -1,6 +1,6 @@
 # Claude Code System Prompts
 
-This repository contains an up-to-date list of all Claude Code's various system prompts and their associated token counts as of **[Claude Code v2.0.50](https://www.npmjs.com/package/@anthropic-ai/claude-code/v/2.0.50) (November 21st, 2025).**  It also contains a [**CHANGELOG.md**](./CHANGELOG.md) for the system prompts across 31 versions since v2.0.14.
+This repository contains an up-to-date list of all Claude Code's various system prompts and their associated token counts as of **[Claude Code v2.0.51](https://www.npmjs.com/package/@anthropic-ai/claude-code/v/2.0.51) (November 24th, 2025).**  It also contains a [**CHANGELOG.md**](./CHANGELOG.md) for the system prompts across 32 versions since v2.0.14.
 
 Why multiple "system prompts?"
 
@@ -48,6 +48,7 @@ Sub-agents and utilities.
 
 ### Utilities
 
+- [Agent Prompt: Agent Hook](./system-prompts/agent-prompt-agent-hook.md) (**133** tks) - Prompt for an 'agent hook'.
 - [Agent Prompt: Bash command file path extraction](./system-prompts/agent-prompt-bash-command-file-path-extraction.md) (**286** tks) - System prompt for extracting file paths from bash command output.
 - [Agent Prompt: Bash command prefix detection](./system-prompts/agent-prompt-bash-command-prefix-detection.md) (**835** tks) - System prompt for detecting command prefixes and command injection.
 - [Agent Prompt: Bash output summarization](./system-prompts/agent-prompt-bash-output-summarization.md) (**605** tks) - System prompt for determining whether bash command output should be summarized.
@@ -100,6 +101,7 @@ Text for large system reminders.
 
 - [Tool Description: Bash](./system-prompts/tool-description-bash.md) (**1074** tks) - Description for the Bash tool, which allows Claude to run shell commands.
 - [Tool Description: Edit](./system-prompts/tool-description-edit.md) (**278** tks) - Tool description for performing exact string replacements in files.
+- [Tool Description: EnterPlanMode](./system-prompts/tool-description-enterplanmode.md) (**773** tks) - Description for the EnterPlanMode tool, which lets Claude enter plan mode proactively..
 - [Tool Description: ExitPlanMode v2](./system-prompts/tool-description-exitplanmode-v2.md) (**450** tks) - V2 description for the ExitPlanMode tool, which presents a plan dialog for the user to approve.
 - [Tool Description: ExitPlanMode](./system-prompts/tool-description-exitplanmode.md) (**342** tks) - Description for the ExitPlanMode tool, which presents a plan dialog for the user to approve.
 - [Tool Description: Glob](./system-prompts/tool-description-glob.md) (**122** tks) - Tool description for file pattern matching and searching by name.
