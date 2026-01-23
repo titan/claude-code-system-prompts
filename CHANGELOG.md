@@ -4,6 +4,17 @@ Note: Only use **NEW:** for entirely new prompt files, NOT for new additions/sec
 
 ### Claude Code System Prompts Changelog
 
+# [2.1.19](https://github.com/Piebald-AI/claude-code-system-prompts/commit/fcf3f24)
+
+_+182 tokens_
+
+- **NEW:** System Prompt: Tool Use Summary Generation - Prompt for generating summaries of tool usage
+- **REMOVED:** Tool Description: TaskList - Description for the TaskList tool, which lists all tasks in the task list
+- Agent Prompt: Status line setup - Added agent information (name and type) to the statusLine structure for agents started with --agent flag
+- Tool Description: Skill - Updated wording from "Only use skills listed in 'Available skills' below" to "Skills listed below are available for invocation"
+- Tool Description: TaskCreate - Added template variables for conditional notes and restructured task assignment instructions
+- Tool Description: ToolSearch - Major expansion: reordered query modes (keyword search now first), clarified that both modes load tools immediately, added required keyword syntax with + prefix, expanded examples to show redundant selection patterns to avoid
+
 #### [2.1.18](https://github.com/Piebald-AI/claude-code-system-prompts/commit/a3f5e2e)
 
 <sub>_No changes to the system prompts in v2.1.18._</sub>
